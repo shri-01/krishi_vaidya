@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>potato_analysis</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="home.html">Krishi-Vaidye</a></h1>
+						
+					</header>
+
+				<!-- Main -->
+					<article id="main">
+						<header>
+							<h2>Plant Doc</h2>
+							<h1>Follow the instructions carefully</h1>
+						</header>
+						<section class="wrapper style5">
+							<div class="inner">
+								<h2>Upload Potato plant leaf</h2>
+
+								<p>Take few photographs of the disease-affected leaves to know the disease and the solution for it.
+									<br><br>Note :
+									
+										<ul>
+											<li>Capture a clear image, which is not blurr</li>
+											<li>Make sure that the disease if visible in the photo clearly</li>
+											<li>Do not take photographs from very near or far from the plant</li>
+										</ul>
+
+								 </p>
+
+
+
+								<div>
+        							<form method="post" enctype="multipart/form-data">
+            							{% csrf_token %}
+           						 		<input type="file" name="imageFile">
+            							<input type="submit" name="submit" value="Upload">
+        							</form>
+    							</div>
+
+    							<!--prediction display -->
+    							<section class="spotlight">
+									<div class="content">
+										
+									<div>
+										<h1><br>Your crop is affected by <br>
+											<ul class="actions stacked">
+												<br><li><a href="#" class="button fit"> {{predictions}}</a></li><br>
+												
+											</ul>
+									</div>
+
+								</div>
+							</section>
+						<!--prediction end -->
+								
+
+							</div>
+						</section>
+					</article>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+						<ul class="copyright">
+							<li>&copy; Krishi-Vaidye</li><br>
+							<li>Built by: ROHIT VIJAPUR | Shridhar A H | Sachin R Shettigar | Rohit Sahu |</li>
+						</ul>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

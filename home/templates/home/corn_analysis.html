@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE HTML>
 
 <html>
@@ -5,8 +6,8 @@
 		<title>corn_analysis</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+		<noscript><link rel="stylesheet" href="{% static 'assets/css/noscript.css' %}" /></noscript>
 	</head>
 	<body class="is-preload">
 
@@ -15,7 +16,7 @@
 
 				<!-- Header -->
 					<header id="header">
-						<h1><a href="home.html">Krishi-Vaidye</a></h1>
+						<h1><a href="{% url 'home' %}">Krishi-Vaidye</a></h1>
 						
 					</header>
 
@@ -55,11 +56,25 @@
 									<div class="content">
 										
 									<div>
-										<h1><br>Your crop is affected by <br>
-											<ul class="actions stacked">
-												<br><li><a href="#" class="button fit"> {{predictions}}</a></li><br>
-												
-											</ul>
+										<ul class="actions stacked">
+											<br><li>
+												{% if predictions == "Gray Leaf Spot" %}
+													<h1><br>Your crop is affected by: <br><br>
+													<a href="{% url 'corn_Gray_leaf_spot' %}" class="button fit"><h2>{{predictions}}</h2></a>
+												{% elif predictions == "Common Rust" %}
+													<h1><br>Your crop is affected by: <br><br>
+													<a href="{% url 'corn_common_rust' %}" class="button fit"><h2>{{predictions}}</h2></a>
+												{% elif predictions == "Leaf Blight" %}
+													<h1><br>Your crop is affected by: <br><br>
+													<a href="{% url 'corn_blight' %}" class="button fit"><h2>{{predictions}}</h2></a>
+												{% elif predictions == "Healthy Plant" %}
+													<h1><br>Your crop is: <br><br>
+													<a href="{% url 'home' %}" class="button fit"><h2>Healthy</h2></a>
+												{% else %}
+													<!-- <h2>Result Window</h2> -->
+												{% endif %}
+											</li><br>	
+										</ul>
 									</div>
 
 								</div>
@@ -88,13 +103,13 @@
 			</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		<script src="{% static 'assets/js/jquery.min.js' %}"></script>
+		<script src="{% static 'assets/js/jquery.scrollex.min.js' %}"></script>
+		<script src="{% static 'assets/js/jquery.scrolly.min.js' %}"></script>
+		<script src="{% static 'assets/js/browser.min.js' %}"></script>
+		<script src="{% static 'assets/js/breakpoints.min.js' %}"></script>
+		<script src="{% static 'assets/js/util.js' %}"></script>
+		<script src="{% static 'assets/js/main.js' %}"></script>
 
 	</body>
 </html>

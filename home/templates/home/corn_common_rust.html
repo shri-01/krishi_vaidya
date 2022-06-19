@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE HTML>
 <!--
 	Spectral by HTML5 UP
@@ -9,8 +10,8 @@
 		<title>Common rust</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+		<noscript><link rel="stylesheet" href="{% static 'assets/css/noscript.css' %}" /></noscript>
 	</head>
 	<body class="is-preload">
 
@@ -19,7 +20,7 @@
 
 				<!-- Header -->
 					<header id="header">
-						<h1><a href="home.html">Krishi-Vaidye</a></h1>
+						<h1><a href="{% url 'home' %}">Krishi-Vaidye</a></h1>
 						
 					</header>
 
@@ -30,7 +31,7 @@
 							
 						</header>
 						<section class="spotlight">
-							<div class="image"><img src="images/rust_1.jpg" alt="" /> <br><img src="images/rust_2.jpg" alt="" /></div><div class="content">
+							<div class="image"><img src="{% static 'images/rust_1.jpg' %}" alt="" /> <br><img src="{% static 'images/rust_2.jpg' %}" alt="" /></div><div class="content">
 								<h2>Common rust</h2>
 								<h1>Reason of cause</h1>
 								<p>Common corn rust, caused by the fungus Puccinia sorghi, is the most frequently occurring of the two primary rust diseases of corn in the U.S., but it rarely causes significant yield losses in Ohio field (dent) corn.</p>
@@ -64,13 +65,13 @@
 			</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		<script src="{% static 'assets/js/jquery.min.js' %}"></script>
+		<script src="{% static 'assets/js/jquery.scrollex.min.js' %}"></script>
+		<script src="{% static 'assets/js/jquery.scrolly.min.js' %}"></script>
+		<script src="{% static 'assets/js/browser.min.js' %}"></script>
+		<script src="{% static 'assets/js/breakpoints.min.js' %}"></script>
+		<script src="{% static 'assets/js/util.js' %}"></script>
+		<script src="{% static 'assets/js/main.js' %}"></script>
 
 	</body>
 </html>

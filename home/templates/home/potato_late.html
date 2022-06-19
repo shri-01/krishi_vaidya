@@ -1,16 +1,13 @@
+{% load static %}
 <!DOCTYPE HTML>
-<!--
-	Spectral by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+
 <html>
 	<head>
 		<title>Late blight</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+		<noscript><link rel="stylesheet" href="{% static 'assets/css/noscript.css' %}" /></noscript>
 	</head>
 	<body class="is-preload">
 
@@ -19,7 +16,7 @@
 
 				<!-- Header -->
 					<header id="header">
-						<h1><a href="home.html">Krishi-Vaidye</a></h1>
+						<h1><a href="{% url 'home' %}">Krishi-Vaidye</a></h1>
 						
 					</header>
 
@@ -30,7 +27,7 @@
 							
 						</header>
 						<section class="spotlight">
-							<div class="image"><img src="images/potato_21.jpg" alt="" /> <br><img src="images/potato_22.jpg" alt="" /></div><div class="content">
+							<div class="image"><img src="{% static 'images/potato_21.jpg' %}" alt="" /> <br><img src="{% static 'images/potato_22.jpg' %}" alt="" /></div><div class="content">
 								<h2>Late blight</h2>
 								<h1>Reason of cause</h1>
 								<p>Late blight is caused by the fungus Phytophthora infestans and is common throughout the United States.</p>
@@ -70,13 +67,13 @@
 			</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		<script src="{% static 'assets/js/jquery.min.js' %}"></script>
+		<script src="{% static 'assets/js/jquery.scrollex.min.js' %}"></script>
+		<script src="{% static 'assets/js/jquery.scrolly.min.js' %}"></script>
+		<script src="{% static 'assets/js/browser.min.js' %}"></script>
+		<script src="{% static 'assets/js/breakpoints.min.js' %}"></script>
+		<script src="{% static 'assets/js/util.js' %}"></script>
+		<script src="{% static 'assets/js/main.js' %}"></script>
 
 	</body>
 </html>

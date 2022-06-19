@@ -22,8 +22,11 @@ GRAPH1 = tf.get_default_graph()
 
 set_session(SESS)
 
-# Loading the model
-IMAGE_MODEL = load_model('plant_model.h5')
+# Loading the models
+TOMATO_MODEL = load_model('plant_model.h5')
+CORN_MODEL = load_model('inceptionv3_corn_model(02).h5')
+BELLPEP_MODEL = load_model('inceptionv3_bellpepper_model(01).h5')
+POTATO_MODEL = load_model('inceptionv3_potato_model(01).h5')
 
 from pathlib import Path
 

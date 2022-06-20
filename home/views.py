@@ -42,6 +42,10 @@ def home(request):
 #         return render(request, "home/tomato_analysis.html")
 #     return render(request, "home/tomato_analysis.html")
 
+def options(request):
+    return render(request, 'home/options.html')
+
+
 def tomato_analysis(request):
     if(request.method == 'POST'):
         file = request.FILES['imageFile']

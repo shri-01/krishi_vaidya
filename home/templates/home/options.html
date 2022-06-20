@@ -1,0 +1,182 @@
+{% load static %}
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Options</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+		<noscript><link rel="stylesheet" href="{% static 'assets/css/noscript.css' %}" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="{% url 'home' %}">Krishi-Vaidye</a></h1>
+						
+					</header>
+
+				<!-- Main -->
+					<article id="main">
+						<header>
+							<h3>Plant Doc</h3>
+							<h1>Choose the plant affected</h1>
+						</header>
+						<section class="wrapper style5">
+							<div class="inner">
+
+
+								
+									<style>
+									.container {
+									  position: relative;
+									  width: 50%;
+									}
+
+									.image {
+									  opacity: 1;
+									  display: block;
+									  width: 100%;
+									  height: auto;
+									  transition: .5s ease;
+									  backface-visibility: hidden;
+									}
+
+									.middle {
+									  transition: .5s ease;
+									  opacity: 0;
+									  position: absolute;
+									  top: 50%;
+									  left: 50%;
+									  transform: translate(-50%, -50%);
+									  -ms-transform: translate(-50%, -50%);
+									  text-align: center;
+									}
+
+									.container:hover .image {
+									  opacity: 0.8;
+									}
+
+									.container:hover .middle {
+									  opacity: 2;
+									}
+
+						
+									.text {
+									  color: white;
+									  font-size: 25px;
+									  font-weight: 100;
+									  padding: 25px 25px 25px 25px;
+									  margin: 25px 25px 25px 205px;
+									}
+									</style>
+									</head>
+									<body>
+								
+
+									<section id="three" class="style3 special">
+										<div class="inner">
+											<header class="major">
+												<br>
+												<h2>Choose the affected plant</h2>
+												
+											</header>
+											<ul class="features">
+
+
+												<!-- potato -->
+
+												<li>
+													<div class="container">
+													  <img src="{% static 'images/potato_img.jpg' %}" alt="Avatar" class="image" style="width:200%">
+													  <div class="middle">
+													    <div class="text">
+													    	<h1><br><a href="{% url 'potato_analysis' %}" class="button fit"><b>POTATO</b></a></h1>
+													    </div>
+													  </div>
+													</div>
+												</li>
+
+												
+												<!-- corn -->
+												<li>
+													<div class="container">
+													  <img src="{% static 'images/corn_img.jpg' %}" alt="Avatar" class="image" style="width:200%">
+													  <div class="middle">
+													    <div class="text">
+													    	<h1><br><a href="{% url 'corn_analysis' %}" class="button fit"><b>CORN</b></a></h1>
+													    </div>
+													  </div>
+													</div>
+												</li>
+												
+
+												<!-- tomato -->
+												<li>
+													<div class="container">
+													  <img src="{% static 'images/tomato_img.jpg' %}" alt="Avatar" class="image" style="width:200%">
+													  <div class="middle">
+													    <div class="text">
+													    	<h1><br><a href="{% url 'tomato_analysis' %}" class="button fit"><b>TOMATO</b></a></h1>
+													    </div>
+													  </div>
+													</div>
+												</li>
+
+												<!-- bellpaper -->
+
+												<li>
+													<div class="container">
+													  <img src="{% static 'images/bellpaper.jpg' %}" alt="Avatar" class="image" style="width:200%">
+													  <div class="middle">
+													    <div class="text">
+													    	<h1><br><a href="{% url 'bellpaper_analysis' %}" class="button fit"><b>BELLPAPER</b></a></h1>
+													    </div>
+													  </div>
+													</div>
+												</li>
+												
+											</ul>
+										</div>
+									</section>
+									  
+									
+
+
+								
+
+							</div>
+						</section>
+					</article>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+						<ul class="copyright">
+							<li>&copy; Krishi-Vaidye</li><br>
+							<li>Built by: ROHIT VIJAPUR | Shridhar A H | Sachin R Shettigar | Rohit Sahu |</li>
+						</ul>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

@@ -6,8 +6,9 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name="home"),
-    path('tomato_analysis/', views.tomato_analysis, name="tomato_analysis"),
+    path('options/', views.options, name="options"),
     # Tomato URL's
+    path('tomato_analysis/', views.tomato_analysis, name="tomato_analysis"),
     path('tomato/diseases/early_blight', views.early_blight, name='early_blight'),
     path('tomato/diseases/late_bligth', views.late_bligth, name='late_bligth'),
     path('tomato/diseases/Septorial_Disease', views.Septorial_Disease, name='Septorial_Disease'),
